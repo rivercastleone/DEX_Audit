@@ -35,6 +35,7 @@ contract DexTest is Test {
     // user1이 최소한의 초기 유동성 제공합니다.
     // user2가 10,000 ether 크기 tokenX와 tokenY을 추가
     // user1이 자신의 초기 유동성을 제거 => 큰 이익을 얻는지 확인
+    
     function test_firstliquidity_exploit() public {
         vm.startPrank(user1);
         tokenX.approve(address(dex), type(uint256).max);
